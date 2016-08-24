@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 ,user-scalable=no" />
+<title>阅片明辨详细</title>
+<link rel="stylesheet" type="text/css" href="res/css/css.css" />
+<link rel="stylesheet" type="text/css" href="res/css/swiper.min.css">
+<script type="text/javascript" src="res/js/jquery.js"></script>
+<script type="text/javascript" src="res/js/swiper.jquery.min.js"></script>
+</head>
+<body>
+	<div class="read_box">
+    	<div class="img_box">
+        	<div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <a href=""><img src="res/test_images/read_01.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <a href=""><img src="res/test_images/img3.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <a href=""><img src="res/test_images/img1.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+        	<div class="swiper_switch"></div>
+        </div>
+        <div class="patient">
+        	<p class="day">男，44岁，胸痛，咳嗽50天，发热10天</p>
+            <p class="info">14岁男孩，体重不增加，右侧感音神经性耳聋。图1为CT检查图像。数月后出现卒中样症状，MRI检查如图2-4。数月后再次出现卒中样症状，再次行MRI检查（图5-6）。可能的诊断是？</p>
+            <p class="author">供稿人：XXXX</p>
+        </div>
+        <div class="diagnose_box">
+        	<p>您的诊断是什么?</p>
+            <ul>
+            	<li>
+                	<input type="radio" /><span>A: 原发性中枢神经系统淋巴瘤</span>
+                </li>
+                <li>
+                	<input type="radio" /><span>B: Kearns-Sayre综合征（KSS）</span>
+                </li>
+                <li>
+                	<input type="radio" /><span>C: Leigh综合征</span>
+                </li>
+                <li>
+                	<input type="radio" /><span>D: Fahr病</span>
+                </li>
+                <li>
+                	<input type="radio" /><span>E: 可逆性后部脑病综合征（PRES）</span>
+                </li>
+                <li>
+                	<input type="radio" /><span>F: 线粒体脑肌病伴高乳酸血症和卒中样发作（MELAS）</span>
+                </li>
+                <li>
+                	<input type="radio" /><span>G: 缺血性卒中</span>
+                </li>
+                <li>
+                	<input type="radio" /><span>H: 急性播散性脑脊髓炎（ADEM）</span>
+                </li>
+            </ul>
+        </div>
+        <div class="submit_btn">
+        	<input type="button" value="提  交" />
+        </div>
+    </div>
+    <script>
+		var mySwiper = new Swiper ('.swiper-container', {
+		  loop:true,
+		  autoplay:3000,
+		  autoplayDisableOnInteraction : false,
+		  speed:100,
+		  effect:'coverflow',
+		  pagination:'.swiper_switch',
+		  paginationElement : 'li',
+		  paginationClickable :true,
+		  paginationBulletRender: function (index, className) {
+      		return '<li class="' + className + '">'+ '</li>';
+  		 },
+		  coverflow:{
+			  	rotate:30,
+				stretch:10,
+				depth:60,
+				modifier:2,
+				slideShadows:true
+			  }
+		}) ;
+    </script>
+</body>
+</html>
